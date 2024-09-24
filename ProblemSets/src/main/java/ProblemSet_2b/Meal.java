@@ -11,8 +11,8 @@ public class Meal {
 	}
 
 	public double calculateTotalSugarLevel() {
-		return mainCourse.getAmountOfSugar() + 
-				dessert.getAmountOfSugar();
+		return mainCourse.getAmountOfSugar()
+				+ dessert.getAmountOfSugar();
 	}
 
 	public String toString() {
