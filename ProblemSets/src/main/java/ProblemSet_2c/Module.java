@@ -21,10 +21,14 @@ public class Module {
         for (Assessment assessment : assessments) {
             total += assessment.getMark();
         }
-        return assessments.isEmpty() ? 0 : total / assessments.size();
+        if (assessments.size() > 0) {
+        	return total / assessments.size();
+        }
+        return 0;
     }
 
     public String toString() {
-        return moduleName + " (" + String.format("%.1f", calculateAverage()) + "%)";
+    	double average = calculateAverage();
+        return moduleName + " (" + String.format("%.1f", average) + "%)";
     }
 }
