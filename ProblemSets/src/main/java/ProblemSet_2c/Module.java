@@ -8,12 +8,12 @@ public class Module {
     private String moduleName;
     private List<Assessment> assessments;
 
-    public Module(Assessment... assessments) {
-        this.assessments = new ArrayList<>();
-        for (Assessment assessment : assessments) {
-            this.assessments.add(assessment);
-        }
+    public Module(Assessment assessment1, Assessment assessment2, Assessment assessment3) {
         this.moduleName = "COM1027";
+        assessments = new ArrayList<>();
+        assessments.add(assessment1);
+        assessments.add(assessment2);
+        assessments.add(assessment3);
     }
 
     public double calculateAverage() {
@@ -21,14 +21,11 @@ public class Module {
         for (Assessment assessment : assessments) {
             total += assessment.getMark();
         }
-        if (assessments.size() > 0) {
-        	return total / assessments.size();
-        }
-        return 0;
+        return total / assessments.size();
     }
 
+
     public String toString() {
-    	double average = calculateAverage();
-        return moduleName + " (" + String.format("%.1f", average) + "%)";
+        return String.format("%s (%.1f%%)", moduleName, calculateAverage());
     }
 }
