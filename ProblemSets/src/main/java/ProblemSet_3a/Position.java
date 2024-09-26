@@ -12,5 +12,5 @@ public class Position {
 		return roleName;
 	}
 
-	
+
 }
