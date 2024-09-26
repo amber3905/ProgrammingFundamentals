@@ -31,7 +31,8 @@ public class AnnualSalary {
 			extremeTax = salary - 125140;
 			higherTax = 125140 - 50270;
 			lowerTax = 50270 - 12570;
-			tax = (extremeTax * 0.45) + (higherTax * 0.4) + (lowerTax * 0.2);
+			tax = (extremeTax * 0.45) + (higherTax * 0.4)
+					+ (lowerTax * 0.2);
 		}
 		return tax;
 	}
