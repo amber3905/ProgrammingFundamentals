@@ -3,25 +3,27 @@ package ProblemSet_3c;
 public class Employee {
 
 	private int id;
-	private String firstName;
+	private String forename;
 	private String surname;
 	private AnnualSalary salary;
 	private Position companyPosition;
+	private String bonus;
+	private double tax;
 
-	public Employee(int newId, String newFirstName, String newSurname, AnnualSalary newSalary, Position newCompanyPosition) {
-		id = newId;
-		firstName = newFirstName;
-		surname = newSurname;
-		salary = newSalary;
-		companyPosition = newCompanyPosition;
+	public Employee(int id, String forename, String surname, AnnualSalary salary, Position companyPosition) {
+		this.id = id;
+		this.forename = forename;
+		this.surname = surname;
+		this.salary = salary;
+		this.companyPosition = companyPosition;
 	}
 
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
 
 	public String getForename() {
-		return firstName;
+		return forename;
 	}
 
 	public String getSurname() {
@@ -36,4 +38,8 @@ public class Employee {
 		return companyPosition;
 	}
 
+	public String toString() {
+		tax = salary.calculateTax();
+		return forename + ", " + surname + " (" + id + "): " + companyPosition + " at £" + salary + " (£" + tax + " tax) and " + bonus + " eligible for bonus.";
+	}
 }
