@@ -5,11 +5,11 @@ public class Classroom {
 	private String room;
 	private Student[] maxStudents;
 	private int currentStudentCount;
-	private int MAX_STUDENTS = 20;
+	private int maxCapacity = 20;
 
 	public Classroom(String room) {
 		this.room = room;
-		maxStudents = new Student[MAX_STUDENTS];
+		maxStudents = new Student[maxCapacity];
 		currentStudentCount = 0;
 	}
 
@@ -18,11 +18,11 @@ public class Classroom {
 	}
 
 	public int getCapacity() {
-		return MAX_STUDENTS;
+		return maxCapacity;
 	}
 
 	public void addStudents(int index, char initial, String surname) {
-		if (currentStudentCount < MAX_STUDENTS) {
+		if (currentStudentCount < maxCapacity) {
 			maxStudents[index] = new Student(initial, surname);
 			currentStudentCount = currentStudentCount + 1;
 		}
