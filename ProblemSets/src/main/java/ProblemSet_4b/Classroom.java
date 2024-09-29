@@ -31,8 +31,8 @@ public class Classroom {
 	public String getSummary() {
 		String summary = "";
 		for (int i = 0; i < currentStudentCount; i = i + 1) {
-			summary = summary +
-					maxStudents[i].getStudentDetails() + "\n";
+			summary = summary + maxStudents[i].getStudentDetails()
+					+ "\n";
 		}
 		return summary.isEmpty() ? "No students added" : summary;
 	}
