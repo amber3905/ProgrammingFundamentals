@@ -14,8 +14,8 @@ public class Day {
 		return day;
 	}
 
-    public void setSession(int index, String sessionName
-    		, int startTime, int endTime) {
+    public void setSession(int index, String sessionName,
+    		int startTime, int endTime) {
         if (index >= 0 && index < sessions.length) {
             sessions[index] = new Session(sessionName, startTime, endTime);
         } else {
