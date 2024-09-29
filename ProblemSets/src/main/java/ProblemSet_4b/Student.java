@@ -5,7 +5,7 @@ public class Student {
 	private char initial;
 	private String surname;
 
-	public Student (char initial, String surname) {
+	public Student(char initial, String surname) {
 		this.initial = initial;
 		this.surname = surname;
 	}
