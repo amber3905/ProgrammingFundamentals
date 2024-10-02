@@ -18,4 +18,9 @@ public class Module {
 		return code;
 	}
 
+	@Override
+	public String toString() {
+		return code + ": " + average;
+	}
+
 }
