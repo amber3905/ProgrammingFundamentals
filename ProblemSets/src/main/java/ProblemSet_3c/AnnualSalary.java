@@ -37,14 +37,4 @@ public class AnnualSalary {
 		}
 		return tax;
 	}
-
-	public String getBonus() {
-		if (salary > 40000) {
-			String bonus = "is";
-		} else {
-			String bonus = "is not";
-		}
-		return bonus;
-	}
-
 }

@@ -30,16 +30,25 @@ public class Employee {
 		return surname;
 	}
 
-	public AnnualSalary getSalary() {
-		return salary;
+	public double getSalary() {
+		return salary.getSalary();
 	}
 
-	public Position getPositionName() {
-		return companyPosition;
+	public String getPositionName() {
+		return companyPosition.getRoleName();
 	}
 
+	public void displayEmplyoyeeName() {
+		System.out.println(forename + " " + surname);
+	}
+
+	public boolean eligibleForBonus() {
+		return salary.getSalary() > 40000;
+	}
+
+	@Override
 	public String toString() {
-		tax = salary.calculateTax();
-		return forename + ", " + surname + " (" + id + "): " + companyPosition + " at £" + salary + " (£" + tax + " tax) and " + bonus + " eligible for bonus.";
+		String bonusStatus = eligibleForBonus() ? "is eligible for bonus." : "is not eligible for bonus.";
+		return surname + ", " + forename + " (" + id + "): " + companyPosition.getRoleName() + " at £" + salary.getSalary() + " (£" + salary.calculateTax() + " tax) and " + bonusStatus;
 	}
 }
