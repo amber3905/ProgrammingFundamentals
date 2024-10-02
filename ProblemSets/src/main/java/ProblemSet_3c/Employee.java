@@ -56,6 +56,7 @@ public class Employee {
 				+ " (" + id + "): "
 				+ companyPosition.getRoleName() + " at £"
 				+ salary.getSalary()
-				+ " (£" + salary.calculateTax() + " tax) and " + bonusStatus;
+				+ " (£" + salary.calculateTax()
+				+ " tax) and " + bonusStatus;
 	}
 }
