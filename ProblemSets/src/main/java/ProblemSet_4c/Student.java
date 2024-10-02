@@ -41,11 +41,11 @@ public class Student {
                 output.append(module.toString()).append("\n");
             }
         }
-        output.append(String.format("Year Average: %.0f%%", calculateAverage()));
+        output.append(String.format("Year Average: %.0f%%", calculateYearAverage()));
         return output.toString();
     }
 
-    public double calculateAverage() {
+    public double calculateYearAverage() {
         double total = 0;
         int count = 0;
         for (Module module : modules) {
@@ -58,7 +58,7 @@ public class Student {
     }
 
     public String getStudentDetails() {
-        return initial + ". " + surname + " " + Math.round(calculateAverage()) + "%";
+        return initial + ". " + surname + " " + Math.round(calculateYearAverage()) + "%";
     }
 
     @Override
