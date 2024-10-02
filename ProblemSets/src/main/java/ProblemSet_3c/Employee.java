@@ -10,7 +10,8 @@ public class Employee {
 	private String bonus;
 	private double tax;
 
-	public Employee(int id, String forename, String surname, AnnualSalary salary, Position companyPosition) {
+	public Employee(int id, String forename, String surname
+			, AnnualSalary salary, Position companyPosition) {
 		this.id = id;
 		this.forename = forename;
 		this.surname = surname;
@@ -48,7 +49,10 @@ public class Employee {
 
 	@Override
 	public String toString() {
-		String bonusStatus = eligibleForBonus() ? "is eligible for bonus." : "is not eligible for bonus.";
-		return surname + ", " + forename + " (" + id + "): " + companyPosition.getRoleName() + " at £" + salary.getSalary() + " (£" + salary.calculateTax() + " tax) and " + bonusStatus;
+		String bonusStatus = eligibleForBonus()
+				? "is eligible for bonus." : "is not eligible for bonus.";
+		return surname + ", " + forename + " (" + id + "): "
+				+ companyPosition.getRoleName() + " at £" + salary.getSalary()
+				+ " (£" + salary.calculateTax() + " tax) and " + bonusStatus;
 	}
 }
