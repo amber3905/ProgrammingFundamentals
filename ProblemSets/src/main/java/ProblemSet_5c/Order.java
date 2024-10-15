@@ -26,6 +26,7 @@ public class Order {
     public String printReceipt() {
         return "Customer: " + customer.toString() + "\n"
         		+ "Number of Pizzas: " + pizzas.size() + "\n"
-        		+ "Total Cost: " + String.format("%.2f", calculateTotal());
+        		+ "Total Cost: "
+        		+ String.format("%.2f", calculateTotal());
     }
 }
