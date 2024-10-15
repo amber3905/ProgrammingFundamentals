@@ -48,7 +48,7 @@ public class GasBill {
 				}
 			}
 		}
-		if (check == false) {
+		if (!check) {
 			this.accountNumber = "Invalid Account";
 		}
 		return check;
@@ -56,7 +56,8 @@ public class GasBill {
 
 	public String displayAccountDetails() {
 		return "Gas Bill\n" + " Account Number:" + accountNumber
-				+ "\n" + " Customer:" + customer.toString() + "\n"
+				+ "\n" + " Customer:" + customer.toString()
+				+ "\n"
 				+ " Amount due:£" + displayAmountDue();
 	}
 
