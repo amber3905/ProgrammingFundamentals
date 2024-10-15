@@ -42,7 +42,9 @@ public class Pizza {
     public double calculateCost() {
         int toppingCount = 0;
         for (String topping : toppings) {
-            if (topping != null) toppingCount++;
+            if (topping != null) {
+            	toppingCount++;
+            }
         }
 
         if (toppingCount == 0) {
