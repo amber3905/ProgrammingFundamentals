@@ -21,7 +21,8 @@ public class GasBill {
 	}
 
 	public boolean checkAccountAccuracy(String accountNumber) {
-		boolean check = accountNumber.matches("(G)([0-9]{4})(-)([0-9]{4})(-)([0-9]{4})");
+		boolean check = accountNumber.matches
+				("(G)([0-9]{4})(-)([0-9]{4})(-)([0-9]{4})");
 		if (!check) {
 			this.accountNumber = "Invalid Account";
 		}
