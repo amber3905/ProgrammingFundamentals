@@ -21,33 +21,7 @@ public class GasBill {
 	}
 
 	public boolean checkAccountAccuracy(String accountNumber) {
-		boolean check = true;
-		if (accountNumber.length() != 15) {
-			check = false;
-		} else if (accountNumber.charAt(0) != 'G'
-				|| accountNumber.charAt(5) != '-'
-				|| accountNumber.charAt(10) != '-') {
-			check = false;
-		} else {
-			for (int i = 1; i < 4; i++) {
-				if (!Character.isDigit(
-						accountNumber.charAt(i))) {
-					check = false;
-				}
-			}
-			for (int i = 6; i < 9; i++) {
-				if (!Character.isDigit(
-						accountNumber.charAt(i))) {
-					check = false;
-				}
-			}
-			for (int i = 11; i < 14; i++) {
-				if (!Character.isDigit(
-						accountNumber.charAt(i))) {
-					check = false;
-				}
-			}
-		}
+		boolean check = accountNumber.matches("(G)([0-9]{4})(-)([0-9]{4})(-)([0-9]{4})");
 		if (!check) {
 			this.accountNumber = "Invalid Account";
 		}
