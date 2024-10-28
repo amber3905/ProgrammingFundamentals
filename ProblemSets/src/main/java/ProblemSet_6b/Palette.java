@@ -37,7 +37,7 @@ public class Palette {
 				}
 			}
 			if (temp.length() > 2) {
-				temp = temp.substring(0, temp.length() -2);
+				temp = temp.substring(0, temp.length() - 2);
 			} else {
 				return "No colours added";
 			}
