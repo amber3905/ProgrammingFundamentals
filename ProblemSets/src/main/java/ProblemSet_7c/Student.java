@@ -8,7 +8,7 @@ public class Student {
 
 	public void addModuleList(Module module) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	public Object getName() {

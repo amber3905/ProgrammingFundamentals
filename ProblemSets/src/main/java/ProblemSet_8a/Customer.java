@@ -18,7 +18,7 @@ public class Customer {
 
 	public void setSurname(String string) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	public Object validateInfo(Object surname) {

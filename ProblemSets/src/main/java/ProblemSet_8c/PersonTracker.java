@@ -4,7 +4,7 @@ public class PersonTracker {
 
 	public void addPerson(String string, String string2, int i) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	public Object getPeopleList() {
@@ -19,7 +19,7 @@ public class PersonTracker {
 
 	public void readTextFile(String string) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }
