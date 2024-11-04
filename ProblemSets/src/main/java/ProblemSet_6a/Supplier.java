@@ -6,6 +6,7 @@ public class Supplier {
 	private String phone;
 
 	public Supplier(String name, String phone) {
+		super();
 		this.name = name;
 		if (phone.matches("(01483)(-)([0-9]{6})")) {
 			this.phone = phone;

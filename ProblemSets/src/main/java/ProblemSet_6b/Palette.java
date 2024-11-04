@@ -5,10 +5,12 @@ public class Palette {
 	private P_COLOUR[] primaryColours;
 
 	public Palette() {
+		super();
 		this.primaryColours = new P_COLOUR[3];
 	}
 
 	public Palette(P_COLOUR[] primaryColours) {
+		super();
 		this.primaryColours = primaryColours;
 	}
 

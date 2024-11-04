@@ -9,6 +9,7 @@ public class Ingredient {
 
 	public Ingredient(String name, IngredientType type,
 			Supplier supplier, double rawWeight) {
+		super();
 		this.name = name;
 		this.type = type;
 		this.supplier = supplier;
@@ -20,11 +21,11 @@ public class Ingredient {
 	}
 
 	public IngredientType getType() {
-		return type;
+		return this.type;
 	}
 
 	public String getSupplier() {
-		return supplier.toString();
+		return this.supplier.toString();
 	}
 
 	public double getRawWeight() {
