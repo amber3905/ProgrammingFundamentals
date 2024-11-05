@@ -2,9 +2,10 @@ package ProblemSet_7c;
 
 public class Module {
 
-	private String name;
+	private String name = null;
 
 	public Module(String name) {
+		super();
 		boolean check = name.matches("(COM)([0-9]{4})");
 		if (check) {
 			this.name = name;
@@ -14,7 +15,7 @@ public class Module {
 	}
 
 	public String getName() {
-		return name;
+		return this.name;
 	}
 
 }
