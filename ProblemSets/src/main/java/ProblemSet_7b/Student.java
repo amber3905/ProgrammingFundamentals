@@ -14,7 +14,8 @@ public class Student {
 		String[] words = name.split(" ");
 		StringBuffer output = new StringBuffer();
 		for (String word : words) {
-			output.append(Character.toUpperCase(word.charAt(0))).append(word.substring(1)).append(" ");
+			output.append(Character.toUpperCase(word.charAt(0))).append
+			(word.substring(1)).append(" ");
 		}
 		this.name = output.toString().trim();
 		if (urn.matches("([0-9]{5})")) {
