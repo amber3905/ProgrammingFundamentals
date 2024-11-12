@@ -2,28 +2,44 @@ package ProblemSet_8a;
 
 public class Customer {
 
-	public Customer(String string, String string2) {
-		// TODO Auto-generated constructor stub
+	private String name = null;
+	private String surname = null;
+
+	public Customer(String name, String surname) {
+		super();
+		if (validateInfo(name) && validateInfo(surname)) {
+			this.name = name;
+			this.surname = surname;
+		} else {
+			throw new IllegalArgumentException("Invalid name");
+		}
 	}
 
-	public Integer getName() {
-		// TODO Auto-generated method stub
-		return null;
+	public char getName() {
+		return this.name.charAt(0);
 	}
 
-	public Object getSurname() {
-		// TODO Auto-generated method stub
-		return null;
+	public String getSurname() {
+		return this.surname;
 	}
 
-	public void setSurname(String string) {
-		// TODO Auto-generated method stub
-
+	public void setSurname(String surname) {
+		this.surname = surname;
 	}
 
-	public Object validateInfo(Object surname) {
-		// TODO Auto-generated method stub
-		return null;
+	public boolean validateInfo(String name) {
+		if (name.matches("^[A-Z][a-z]*")) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 
+	@Override
+	public String toString() {
+		StringBuffer temp = new StringBuffer();
+		temp.append(this.name.charAt(0));
+		temp.append(". " + this.surname);
+		return temp.toString();
+	}
 }
