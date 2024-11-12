@@ -2,23 +2,31 @@ package ProblemSet_8c;
 
 public class Person {
 
-	public Person(String string, String string2, int i) {
-		// TODO Auto-generated constructor stub
+	private String forename = null;
+	private String surname = null;
+	private int age = 0;
+
+	public Person(String forename, String surname, int age) {
+		super();
+		this.forename = forename;
+		this.surname = surname;
+		this.age = age;
 	}
 
-	public Integer getAge() {
-		// TODO Auto-generated method stub
-		return null;
+	public int getAge() {
+		return this.age;
 	}
 
-	public Object getForename() {
-		// TODO Auto-generated method stub
-		return null;
+	public String getForename() {
+		return this.forename;
 	}
 
-	public Object getSurname() {
-		// TODO Auto-generated method stub
-		return null;
+	public String getSurname() {
+		return this.surname;
 	}
 
+	@Override
+	public String toString() {
+		return this.forename + " " + this.surname + " (" + this.age + ")";
+	}
 }
