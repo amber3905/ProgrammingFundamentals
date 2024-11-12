@@ -28,11 +28,7 @@ public class Customer {
 	}
 
 	public boolean validateInfo(String name) {
-		if (name.matches("^[A-Z][a-z]*")) {
-			return true;
-		} else {
-			return false;
-		}
+		return name.matches("^[A-Z][a-z]*");
 	}
 
 	@Override
