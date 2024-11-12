@@ -26,9 +26,9 @@ public class Counting {
 				line = br.readLine();
 			}
 			br.close();
-		} catch(FileNotFoundException e1) {
+		} catch (FileNotFoundException e1) {
 			e1.printStackTrace();
-		} catch(IOException e2) {
+		} catch (IOException e2) {
 			e2.printStackTrace();
 		}
 		return result.toString();
