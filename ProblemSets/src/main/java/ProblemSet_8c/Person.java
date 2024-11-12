@@ -27,7 +27,7 @@ public class Person {
 
 	@Override
 	public String toString() {
-		return this.forename + " " + this.surname +
-				" (" + this.age + ")";
+		return this.forename + " " + this.surname
+				+ " (" + this.age + ")";
 	}
 }
