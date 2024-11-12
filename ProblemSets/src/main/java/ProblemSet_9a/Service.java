@@ -2,23 +2,37 @@ package ProblemSet_9a;
 
 public class Service {
 
-	public Service(String string, String string2, VATRate standard) {
-		// TODO Auto-generated constructor stub
+	private String code = null;
+	private String name = null;
+	private VATRate rate = null;
+
+	public Service(String code, String name, VATRate rate) {
+		super();
+		if (code == null) {
+			throw new NullPointerException();
+		} else if (code.matches("([A-Z]{4})([0-9]{5})")) {
+			this.code = code;
+		} else {
+			throw new IllegalArgumentException();
+		}
+		if (name != null) {
+			this.name = name;
+		} else {
+			throw new NullPointerException();
+		}
+		this.rate = rate;
 	}
 
-	public Object getCode() {
-		// TODO Auto-generated method stub
-		return null;
+	public String getCode() {
+		return this.code;
 	}
 
-	public Object getName() {
-		// TODO Auto-generated method stub
-		return null;
+	public String getName() {
+		return this.name;
 	}
 
-	public Object getRate() {
-		// TODO Auto-generated method stub
-		return null;
+	public VATRate getRate() {
+		return this.rate;
 	}
 
 }
