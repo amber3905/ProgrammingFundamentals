@@ -37,7 +37,8 @@ public class StudentTracker {
 		StringBuffer output = new StringBuffer();
 		output.append("URN ").append(urn);
 		output.append(" is enrolled in:\n");
-		output.append(moduleList.getOrDefault(urn, null).printModules());
+		output.append(moduleList.getOrDefault(urn, null)
+				.printModules());
 		return output.toString();
 	}
 
