@@ -11,7 +11,8 @@ public class Guest implements IGuest {
 	private String telephone = null;
 	private List<Charge> charges;
 
-	public Guest(String forename, String surname, String address, String telephone) {
+	public Guest(String forename, String surname,
+			String address, String telephone) {
 		super();
 		this.forename = forename;
 		this.surname = surname;
@@ -69,7 +70,8 @@ public class Guest implements IGuest {
 	public double calculateTotalChargeIncVat() {
 		double totalWithVAT = 0;
 		for (Charge charge : this.charges) {
-			double vat = charge.getCharge() * charge.getService().getRate().getRate();
+			double vat = charge.getCharge() *
+					charge.getService().getRate().getRate();
 			totalWithVAT += charge.getCharge() + vat;
 		}
 		return totalWithVAT;
