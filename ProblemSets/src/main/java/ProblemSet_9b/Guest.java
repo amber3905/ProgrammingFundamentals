@@ -70,8 +70,8 @@ public class Guest implements IGuest {
 	public double calculateTotalChargeIncVat() {
 		double totalWithVAT = 0;
 		for (Charge charge : this.charges) {
-			double vat = charge.getCharge() *
-					charge.getService().getRate().getRate();
+			double vat = charge.getCharge()
+					* charge.getService().getRate().getRate();
 			totalWithVAT += charge.getCharge() + vat;
 		}
 		return totalWithVAT;
