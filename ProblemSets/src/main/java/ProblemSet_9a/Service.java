@@ -1,5 +1,7 @@
 package ProblemSet_9a;
 
+import java.util.regex.Pattern;
+
 public class Service {
 
 	private String code = null;
@@ -8,19 +10,25 @@ public class Service {
 
 	public Service(String code, String name, VATRate rate) {
 		super();
-		if (code == null) {
+
+		if (code == null || code.isEmpty()) {
 			throw new NullPointerException();
-		} else if (code.matches("([A-Z]{4})([0-9]{5})")) {
-			this.code = code;
-		} else {
+		}
+		if (name == null || name.isEmpty()) {
+			throw new NullPointerException();
+		}
+		if (!isValidCode(code)) {
 			throw new IllegalArgumentException();
 		}
-		if (name != null) {
-			this.name = name;
-		} else {
-			throw new NullPointerException();
-		}
+
+		this.code = code;
+		this.name = name;
 		this.rate = rate;
+	}
+
+	private boolean isValidCode(String code) {
+		String regex = "^[A-Z]{4}\\d{5}$";
+		return Pattern.matches(regex, code);
 	}
 
 	public String getCode() {

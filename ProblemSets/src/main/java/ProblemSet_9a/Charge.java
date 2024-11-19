@@ -5,23 +5,29 @@ public class Charge {
 	private Service service;
 	private double charge = 0;
 
-	public Charge(Service service, double d) {
-		// TODO Auto-generated constructor stub
+	public Charge(Service service, double charge) {
+		super();
+		if (service == null) {
+			throw new IllegalArgumentException();
+		}
+		if (charge <= 0) {
+			throw new IllegalArgumentException();
+		}
+
+		this.service = service;
+		this.charge = charge;
 	}
 
-	public Object getService() {
-		// TODO Auto-generated method stub
-		return null;
+	public Service getService() {
+		return this.service;
 	}
 
-	public int getCharge() {
-		// TODO Auto-generated method stub
-		return 0;
+	public double getCharge() {
+		return this.charge;
 	}
 
-	public int calculateVAT() {
-		// TODO Auto-generated method stub
-		return 0;
+	public double calculateVAT() {
+		return this.charge * this.service.getRate().getRate();
 	}
 
 }
