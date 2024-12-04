@@ -40,13 +40,19 @@ public class Customer {
 		this.surname = surname;
 	}
 
-	// Validates that the name consists of an uppercase letter followed by lowercase letters.
+	/* Validates that the name consists of an uppercase
+	 * letter followed by lowercase letters.
+	 */
 	public boolean validateInfo(String name) {
-        // Checks if the name matches the pattern (first letter uppercase, rest lowercase).
+        /* Checks if the name matches the pattern
+         * (first letter uppercase, rest lowercase).
+         */
 		return name.matches("^[A-Z][a-z]*");
 	}
 
-	// Returns a string representation of the customer in the format "N. Surname".
+	/* Returns a string representation of
+	 * the customer in the format "N. Surname".
+	 */
 	@Override
 	public String toString() {
 		// StringBuffer for efficient string concatenation.

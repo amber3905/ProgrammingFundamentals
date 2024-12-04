@@ -5,7 +5,9 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-// The Counting class reads lines from a text file, numbers each line, and formats
+/* The Counting class reads lines from a text file,
+ * numbers each line, and formats
+ */
 public class Counting {
 
     // Default constructor for the Counting class.
@@ -13,7 +15,9 @@ public class Counting {
 		super();
 	}
 
-    // Reads a text file line by line, numbers each line, and appends the formatted result.
+    /* Reads a text file line by line, numbers each line,
+     * and appends the formatted result.
+     */
 	public String readTextFile(String file) {
 		// FileReader to read the file.
 		FileReader fr = null;

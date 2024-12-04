@@ -34,7 +34,9 @@ public class Person {
 		return this.surname;
 	}
 
-    // Returns a string representation of the person, including their full name and age.
+    /* Returns a string representation of the person, including
+     * their full name and age.
+     */
 	@Override
 	public String toString() {
 		return this.forename + " " + this.surname

@@ -41,7 +41,9 @@ public class PersonTracker {
 		return output.toString();
 	}
 
-    // Reads a text file containing person details, adds each person to the tracker,
+    /* Reads a text file containing person details,
+     * adds each person to the tracker,
+     */
 	public String readTextFile(String file) {
 		FileReader fr = null;
 		BufferedReader br = null;
@@ -55,7 +57,9 @@ public class PersonTracker {
 			while (line != null) {
 				// Append the line to the output string.
 				output.append(line).append("\n");
-				// Process the line to add a Person to the tracker.
+				/* Process the line to add
+				 * a Person to the tracker.
+				 */
 				breakLine(line);
 				// Read the next line.
 				line = br.readLine();
