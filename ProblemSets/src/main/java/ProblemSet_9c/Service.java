@@ -2,7 +2,9 @@ package ProblemSet_9c;
 
 import java.util.regex.Pattern;
 
-// The Service class represents a service with a unique code, name, and an associated VAT rate.
+/* The Service class represents a service
+ * with a unique code, name, and an associated VAT rate.
+ */
 public class Service {
 
     // Unique code identifying the service.

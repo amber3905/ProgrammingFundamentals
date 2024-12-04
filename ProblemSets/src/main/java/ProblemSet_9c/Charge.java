@@ -1,9 +1,13 @@
 package ProblemSet_9c;
 
-//The Charge class represents a charge for a specific service, including its value and associated VAT calculation.
+/*The Charge class represents a charge for
+ * a specific service, including its value and associated VAT calculation.
+ */
 public class Charge {
 
-    // Instance variables for the associated Service and the monetary charge amount.
+  /* Instance variables for the associated
+   * Service and the monetary charge amount.
+   */
 	private Service service;
 	private double charge = 0;
 
