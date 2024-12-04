@@ -9,13 +9,17 @@ public interface IGuest {
     // Calculates the total charge for the guest's account excluding VAT.
 	public double calculateTotalChargeWithoutVAT();
 
-    // Calculates the total VAT amount for the guest's charges at a specific VAT rate.
+	 /* Calculates the total VAT amount for
+	  * the guest's charges at a specific VAT rate.
+	  */
 	public double calculateVATChargeAtRate(VATRate r);
 
     // Calculates the total charge for the guest's account, including VAT.
 	public double calculateTotalChargeIncVat();
 
-    // Returns a string representation of the guest, including their personal details.
+    /* Returns a string representation of
+     * the guest, including their personal details.
+     */
 	@Override
 	public String toString();
 

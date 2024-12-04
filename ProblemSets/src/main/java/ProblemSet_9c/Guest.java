@@ -3,7 +3,9 @@ package ProblemSet_9c;
 import java.util.ArrayList;
 import java.util.List;
 
-// The Guest class represents a guest with personal information and a list of charges.
+/* The Guest class represents a guest with
+ * personal information and a list of charges.
+ */
 public class Guest implements IGuest {
 
     // Guest's personal information.
@@ -94,14 +96,17 @@ public class Guest implements IGuest {
 		return totalWithVAT;
 	}
 
-    // Returns a string representation of the guest, including their personal details.
+    /* Returns a string representation of the
+     * guest, including their personal details.
+     */
 	@Override
 	public String toString() {
 		StringBuffer output = new StringBuffer();
 		output.append(this.forename).append(" "); 	// Add forename.
 		output.append(this.surname).append(", "); 	// Add surname.
 		output.append(this.address).append(", "); 	// Add address.
-		output.append(this.telephone);				// Add telephone number.
+		// Add telephone number.
+		output.append(this.telephone);
 		return output.toString();
 	}
 
